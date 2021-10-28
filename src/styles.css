@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(39, 39, 39);
+  color: #fff;
+  padding: 40px;
+}
+
+h1,
+h4 {
+  text-align: center;
+}
+
+.code-edit-container {
+  position: relative;
+  height: 500px;
+  border: 1px solid #aaa;
+  margin: 1rem 0;
+}
+
+.input,
+.output {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: none;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  background: transparent;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.input {
+  color: #fff;
+  resize: none;
+  background: rgb(26, 26, 26);
+}
+
+.output {
+  pointer-events: none;
+  overflow-y: auto;
+}
+
+.code[class*="language-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding: 1rem;
+  font-size: 1.3rem;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+/* overrides */
+.code-edit-container :not(pre) > code[class*="language-"],
+.code-edit-container pre[class*="language-"] {
+  background: transparent;
+  margin: 0;
+}
